@@ -1,7 +1,7 @@
 package cn.jzyunqi.common.third.ali.client;
 
 import cn.jzyunqi.common.exception.BusinessException;
-import cn.jzyunqi.common.third.ali.response.SendSmsRsp;
+import cn.jzyunqi.common.third.ali.model.response.SendSmsRsp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.RequestEntity;

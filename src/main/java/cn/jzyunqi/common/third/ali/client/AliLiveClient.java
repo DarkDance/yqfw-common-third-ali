@@ -1,7 +1,7 @@
 package cn.jzyunqi.common.third.ali.client;
 
-import cn.jzyunqi.common.third.ali.enums.LiveProtocol;
-import cn.jzyunqi.common.third.ali.enums.LiveType;
+import cn.jzyunqi.common.third.ali.model.enums.LiveProtocol;
+import cn.jzyunqi.common.third.ali.model.enums.LiveType;
 import cn.jzyunqi.common.utils.DigestUtilPlus;
 import cn.jzyunqi.common.utils.StringUtilPlus;
 

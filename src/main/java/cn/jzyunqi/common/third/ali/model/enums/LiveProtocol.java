@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.enums;
+package cn.jzyunqi.common.third.ali.model.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

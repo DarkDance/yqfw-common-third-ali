@@ -1,6 +1,6 @@
-package cn.jzyunqi.common.third.ali.response;
+package cn.jzyunqi.common.third.ali.model.response;
 
-import cn.jzyunqi.common.third.ali.enums.TradeStatus;
+import cn.jzyunqi.common.third.ali.model.enums.TradeStatus;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;

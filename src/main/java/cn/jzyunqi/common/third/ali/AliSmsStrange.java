@@ -4,7 +4,7 @@ import cn.jzyunqi.common.exception.BusinessException;
 import cn.jzyunqi.common.feature.sms.SmsHelper;
 import cn.jzyunqi.common.feature.sms.SmsResultDto;
 import cn.jzyunqi.common.third.ali.client.AliSmsClient;
-import cn.jzyunqi.common.third.ali.response.SendSmsRsp;
+import cn.jzyunqi.common.third.ali.model.response.SendSmsRsp;
 import cn.jzyunqi.common.utils.CollectionUtilPlus;
 import cn.jzyunqi.common.utils.StringUtilPlus;
 

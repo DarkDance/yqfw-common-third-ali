@@ -5,7 +5,7 @@ import cn.jzyunqi.common.feature.redis.Cache;
 import cn.jzyunqi.common.feature.redis.RedisHelper;
 import cn.jzyunqi.common.third.ali.constant.AliOssTokenParams;
 import cn.jzyunqi.common.third.ali.model.AliOssToken;
-import cn.jzyunqi.common.third.ali.response.AssumeRoleRsp;
+import cn.jzyunqi.common.third.ali.model.response.AssumeRoleRsp;
 
 import java.time.LocalDateTime;
 import java.util.Map;
