@@ -58,7 +58,7 @@ public class AliOssStrange implements OssHelper {
         //构建新的AliOssHelper，否则token会失效
         AliOssClient aliOssHelper = new AliOssClient(ossTokenRedisDto.getAccessKeyId(), ossTokenRedisDto.getAccessKeySecret(), ossTokenRedisDto.getStsToken());
 
-        String fileName = DigestUtilPlus.MD5.sign(StringUtilPlus.join(uid, "-", System.currentTimeMillis(), "-", RandomUtilPlus.String.randomAlphanumeric(32)), Boolean.FALSE) + ".jpg";
+        String fileName = DigestUtilPlus.MD5.sign(StringUtilPlus.join(uid, "-", System.currentTimeMillis(), "-", RandomUtilPlus.String.nextAlphanumeric(32)), Boolean.FALSE) + ".jpg";
         aliOssHelper.fetch(headImgUrl, bucket, fileName);
         return fileName;
     }

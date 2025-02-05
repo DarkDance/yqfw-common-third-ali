@@ -52,7 +52,7 @@ public abstract class AliBaseClient {
         // 1. 填充系统参数
         params.put("SignatureMethod", "HMAC-SHA1"); //签名算法
         params.put("SignatureVersion", "1.0");
-        params.put("SignatureNonce", RandomUtilPlus.String.randomAlphanumeric(32)); //用于请求的防重放攻击
+        params.put("SignatureNonce", RandomUtilPlus.String.nextAlphanumeric(32)); //用于请求的防重放攻击
         params.put("AccessKeyId", accessKeyId); //子用户accessKey
         params.put("Timestamp", LocalDateTime.now(DateTimeUtilPlus.GMT0_ZONE_ID).format(DateTimeUtilPlus.ALI_BASE_DATE_FORMAT));// 这里一定要设置GMT0时区
         params.put("Format", "JSON"); //没传默认为JSON，可选填值：XML
