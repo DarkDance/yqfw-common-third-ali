@@ -16,11 +16,11 @@ import java.util.Map;
  * @author wiiyaya
  * @date 2018/5/3
  */
-public class AliOssStrange implements OssHelper {
+public class AliOssStrategy implements OssHelper {
 
     private final AliOssTokenGenClient aliOssTokenGenClient;
 
-    public AliOssStrange(AliOssTokenGenClient aliOssTokenGenClient){
+    public AliOssStrategy(AliOssTokenGenClient aliOssTokenGenClient){
         this.aliOssTokenGenClient = aliOssTokenGenClient;
     }
 

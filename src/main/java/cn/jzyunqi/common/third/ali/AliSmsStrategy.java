@@ -14,11 +14,11 @@ import java.util.List;
  * @author wiiyaya
  * @date 2022/11/30.
  */
-public class AliSmsStrange implements SmsHelper {
+public class AliSmsStrategy implements SmsHelper {
 
     private final AliSmsClient aliSmsClient;
 
-    public AliSmsStrange(AliSmsClient aliSmsClient) {
+    public AliSmsStrategy(AliSmsClient aliSmsClient) {
         this.aliSmsClient = aliSmsClient;
     }
 
