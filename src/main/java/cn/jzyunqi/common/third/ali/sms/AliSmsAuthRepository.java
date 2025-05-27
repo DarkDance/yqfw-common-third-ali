@@ -17,27 +17,27 @@ public abstract class AliSmsAuthRepository implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        List<AliSmsAuth> aliPayAuthList = initAliPayAuthList();
-        for (AliSmsAuth aliSmsAuth : aliPayAuthList) {
+        List<AliSmsAuth> aliSmsAuthList = initAliSmsAuthList();
+        for (AliSmsAuth aliSmsAuth : aliSmsAuthList) {
             authMap.put(aliSmsAuth.getAccessKeyId(), aliSmsAuth);
         }
     }
 
-    public AliSmsAuth choosAliPayAuth(String wxAppId) {
+    public AliSmsAuth choosAliSmsAuth(String wxAppId) {
         return authMap.get(wxAppId);
     }
 
-    public void addAliPayAuth(AliSmsAuth aliSmsAuth) {
+    public void addAliSmsAuth(AliSmsAuth aliSmsAuth) {
         authMap.put(aliSmsAuth.getAccessKeyId(), aliSmsAuth);
     }
 
-    public void removeAliPayAuth(String wxAppId) {
+    public void removeAliSmsAuth(String wxAppId) {
         authMap.remove(wxAppId);
     }
 
-    public List<AliSmsAuth> getAliPayAuthList() {
+    public List<AliSmsAuth> getAliSmsAuthList() {
         return new ArrayList<>(authMap.values());
     }
 
-    public abstract List<AliSmsAuth> initAliPayAuthList();
+    public abstract List<AliSmsAuth> initAliSmsAuthList();
 }

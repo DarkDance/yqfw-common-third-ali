@@ -34,7 +34,7 @@ public class AliSmsClient {
     public class Sender {
 
         public String sendSms(String accessKeyId, String smsSign, List<String> phoneList, String templateCode, Map<String, String> templateParamMap) throws BusinessException {
-            AliSmsAuth aliSmsAuth = aliSmsAuthRepository.choosAliPayAuth(accessKeyId);
+            AliSmsAuth aliSmsAuth = aliSmsAuthRepository.choosAliSmsAuth(accessKeyId);
 
             String phoneNumbers = String.join(StringUtilPlus.COMMA, phoneList);
             String templateParam = null;

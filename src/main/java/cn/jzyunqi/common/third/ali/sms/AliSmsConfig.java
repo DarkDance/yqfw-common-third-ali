@@ -60,7 +60,7 @@ public class AliSmsConfig {
                 .filter(ExchangeFilterFunction.ofRequestProcessor(request -> {
                     String accessKeyId = (String) request.attribute("accessKeyId").orElse(null);
                     Action action = (Action) request.attribute("action").orElse(null);
-                    AliSmsAuth auth = aliSmsAuthRepository.choosAliPayAuth(accessKeyId);
+                    AliSmsAuth auth = aliSmsAuthRepository.choosAliSmsAuth(accessKeyId);
 
                     ClientRequest.Builder amendRequest = ClientRequest.from(request);
                     if (request.method() == HttpMethod.GET) {
