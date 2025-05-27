@@ -1,13 +1,13 @@
-package cn.jzyunqi.common.third.ali.client;
+package cn.jzyunqi.common.third.ali.pay;
 
 import cn.jzyunqi.common.exception.BusinessException;
-import cn.jzyunqi.common.third.ali.model.enums.TradeStatus;
-import cn.jzyunqi.common.third.ali.model.TradeAppPayResult;
-import cn.jzyunqi.common.third.ali.model.TradeQueryResult;
-import cn.jzyunqi.common.third.ali.model.TradeRefundResult;
-import cn.jzyunqi.common.third.ali.model.response.AliPayRsp;
-import cn.jzyunqi.common.third.ali.model.response.TradeQueryRsp;
-import cn.jzyunqi.common.third.ali.model.response.TradeRefundRsp;
+import cn.jzyunqi.common.third.ali.pay.order.enums.TradeStatus;
+import cn.jzyunqi.common.third.ali.pay.order.model.TradeAppPayResult;
+import cn.jzyunqi.common.third.ali.pay.order.model.TradeQueryResult;
+import cn.jzyunqi.common.third.ali.pay.order.model.TradeRefundResult;
+import cn.jzyunqi.common.third.ali.pay.order.model.AliPayRsp;
+import cn.jzyunqi.common.third.ali.pay.order.model.TradeQueryRsp;
+import cn.jzyunqi.common.third.ali.pay.order.model.TradeRefundRsp;
 import cn.jzyunqi.common.utils.DateTimeUtilPlus;
 import cn.jzyunqi.common.utils.DigestUtilPlus;
 import cn.jzyunqi.common.utils.StringUtilPlus;

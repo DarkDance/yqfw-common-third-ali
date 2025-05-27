@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.model.response;
+package cn.jzyunqi.common.third.ali.oss.model;
 
 import cn.jzyunqi.common.third.ali.common.model.AliYunBaseRsp;
 import com.fasterxml.jackson.annotation.JsonFormat;

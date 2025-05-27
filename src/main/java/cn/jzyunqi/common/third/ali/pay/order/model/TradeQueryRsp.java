@@ -1,6 +1,6 @@
-package cn.jzyunqi.common.third.ali.model.response;
+package cn.jzyunqi.common.third.ali.pay.order.model;
 
-import cn.jzyunqi.common.third.ali.model.enums.TradeStatus;
+import cn.jzyunqi.common.third.ali.pay.order.enums.TradeStatus;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +13,7 @@ import java.io.Serial;
  */
 @Getter
 @Setter
-public class TradeQueryRsp extends AliPayBaseRsp{
+public class TradeQueryRsp extends AliPayBaseRsp {
     @Serial
     private static final long serialVersionUID = 7512226337272314643L;
 

@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.client;
+package cn.jzyunqi.common.third.ali.oss;
 
 import cn.jzyunqi.common.utils.DateTimeUtilPlus;
 import cn.jzyunqi.common.utils.DigestUtilPlus;
@@ -47,7 +47,7 @@ public abstract class AliBaseClient {
      *
      * @return TreeMap
      */
-    TreeMap<String, String> getPublicParamMap() {
+    public TreeMap<String, String> getPublicParamMap() {
         TreeMap<String, String> params = new TreeMap<>();
         // 1. 填充系统参数
         params.put("SignatureMethod", "HMAC-SHA1"); //签名算法
@@ -67,7 +67,7 @@ public abstract class AliBaseClient {
      * @return 签名后请求参数
      * @throws Exception 异常
      */
-    String generateParamPopSign(TreeMap<String, String> params) throws Exception {
+    public String generateParamPopSign(TreeMap<String, String> params) throws Exception {
         StringBuilder sortQueryStringTmp = new StringBuilder();
         params.forEach((key, value) -> {
             try {

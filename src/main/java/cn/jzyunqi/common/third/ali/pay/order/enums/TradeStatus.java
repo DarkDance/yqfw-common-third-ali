@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.model.enums;
+package cn.jzyunqi.common.third.ali.pay.order.enums;
 
 /**
  * @author wiiyaya

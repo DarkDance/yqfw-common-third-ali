@@ -1,7 +1,7 @@
-package cn.jzyunqi.common.third.ali.client;
+package cn.jzyunqi.common.third.ali.oss;
 
 import cn.jzyunqi.common.exception.BusinessException;
-import cn.jzyunqi.common.third.ali.model.response.AssumeRoleRsp;
+import cn.jzyunqi.common.third.ali.oss.model.AssumeRoleRsp;
 import cn.jzyunqi.common.utils.StringUtilPlus;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpMethod;

@@ -3,10 +3,9 @@ package cn.jzyunqi.common.third.ali.oss;
 import cn.jzyunqi.common.exception.BusinessException;
 import cn.jzyunqi.common.feature.redis.Cache;
 import cn.jzyunqi.common.feature.redis.RedisHelper;
-import cn.jzyunqi.common.third.ali.client.AliStsClient;
 import cn.jzyunqi.common.third.ali.oss.constant.AliOssTokenParams;
 import cn.jzyunqi.common.third.ali.oss.model.AliOssToken;
-import cn.jzyunqi.common.third.ali.model.response.AssumeRoleRsp;
+import cn.jzyunqi.common.third.ali.oss.model.AssumeRoleRsp;
 
 import java.time.LocalDateTime;
 import java.util.Map;

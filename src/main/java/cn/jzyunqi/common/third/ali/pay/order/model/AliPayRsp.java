@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.model.response;
+package cn.jzyunqi.common.third.ali.pay.order.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

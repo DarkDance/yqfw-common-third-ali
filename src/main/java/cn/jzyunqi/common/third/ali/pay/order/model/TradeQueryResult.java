@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.model;
+package cn.jzyunqi.common.third.ali.pay.order.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,19 +13,19 @@ import java.math.BigDecimal;
  */
 @Getter
 @Setter
-public class TradeRefundResult implements Serializable {
+public class TradeQueryResult implements Serializable {
     @Serial
-    private static final long serialVersionUID = -11080430037729379L;
+    private static final long serialVersionUID = -6395253754694563533L;
 
     /**
-     * 支付宝退款单号
+     * 实际支付单号
      */
     private String tradeNo;
 
     /**
-     * 支付宝退款金额
+     * 实际支付金额
      */
-    private BigDecimal refundFee;
+    private BigDecimal totalAmount;
 
     /**
      * 查询返回字符串

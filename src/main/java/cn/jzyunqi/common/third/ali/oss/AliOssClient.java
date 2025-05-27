@@ -1,7 +1,6 @@
 package cn.jzyunqi.common.third.ali.oss;
 
 import cn.jzyunqi.common.exception.BusinessException;
-import cn.jzyunqi.common.third.ali.client.AliBaseClient;
 import cn.jzyunqi.common.utils.CollectionUtilPlus;
 import cn.jzyunqi.common.utils.DateTimeUtilPlus;
 import cn.jzyunqi.common.utils.DigestUtilPlus;
