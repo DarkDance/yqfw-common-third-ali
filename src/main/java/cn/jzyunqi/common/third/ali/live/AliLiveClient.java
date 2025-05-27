@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.client;
+package cn.jzyunqi.common.third.ali.live;
 
 import cn.jzyunqi.common.third.ali.model.enums.LiveProtocol;
 import cn.jzyunqi.common.third.ali.model.enums.LiveType;

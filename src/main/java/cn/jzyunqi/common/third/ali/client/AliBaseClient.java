@@ -87,7 +87,7 @@ public abstract class AliBaseClient {
      * @return 签名后的字符串
      * @throws Exception 异常
      */
-    String ossSign(String stringToSign) throws Exception {
+    public String ossSign(String stringToSign) throws Exception {
         return DigestUtilPlus.Mac.sign(stringToSign, accessKeySecret, DigestUtilPlus.MacAlgo.H_SHA1, Boolean.TRUE);
     }
 

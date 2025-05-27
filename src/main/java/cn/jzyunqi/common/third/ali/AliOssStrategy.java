@@ -2,10 +2,10 @@ package cn.jzyunqi.common.third.ali;
 
 import cn.jzyunqi.common.exception.BusinessException;
 import cn.jzyunqi.common.feature.oss.OssHelper;
-import cn.jzyunqi.common.third.ali.client.AliOssClient;
-import cn.jzyunqi.common.third.ali.client.AliOssTokenGenClient;
-import cn.jzyunqi.common.third.ali.constant.AliOssTokenParams;
-import cn.jzyunqi.common.third.ali.model.AliOssToken;
+import cn.jzyunqi.common.third.ali.oss.AliOssClient;
+import cn.jzyunqi.common.third.ali.oss.AliOssTokenGenClient;
+import cn.jzyunqi.common.third.ali.oss.constant.AliOssTokenParams;
+import cn.jzyunqi.common.third.ali.oss.model.AliOssToken;
 import cn.jzyunqi.common.utils.DigestUtilPlus;
 import cn.jzyunqi.common.utils.RandomUtilPlus;
 import cn.jzyunqi.common.utils.StringUtilPlus;

@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.model;
+package cn.jzyunqi.common.third.ali.oss.model;
 
 import lombok.Getter;
 import lombok.Setter;

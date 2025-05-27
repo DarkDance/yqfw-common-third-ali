@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.constant;
+package cn.jzyunqi.common.third.ali.oss.constant;
 
 /**
  * @author wiiyaya
