@@ -1,5 +1,6 @@
-package cn.jzyunqi.common.third.ali.model.response;
+package cn.jzyunqi.common.third.ali.sms.send.model;
 
+import cn.jzyunqi.common.third.ali.common.model.AliYunBaseRsp;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;

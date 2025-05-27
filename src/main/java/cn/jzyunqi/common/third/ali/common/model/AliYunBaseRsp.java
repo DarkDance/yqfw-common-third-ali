@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.model.response;
+package cn.jzyunqi.common.third.ali.common.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 @Getter
 @Setter
-abstract class AliYunBaseRsp implements Serializable {
+public abstract class AliYunBaseRsp implements Serializable {
     @Serial
     private static final long serialVersionUID = -3393793664243718777L;
 
