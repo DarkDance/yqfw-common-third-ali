@@ -54,7 +54,7 @@ public class AliSmsConfig {
     }
 
     @Bean
-    public AliSmsApiProxy tencentSmsSendApiProxy(WebClient.Builder webClientBuilder, AliSmsAuthRepository aliSmsAuthRepository) {
+    public AliSmsApiProxy aliSmsApiProxy(WebClient.Builder webClientBuilder, AliSmsAuthRepository aliSmsAuthRepository) {
         WebClient webClient = webClientBuilder.clone()
                 //.codecs(WxFormatUtils::jackson2Config)
                 .filter(ExchangeFilterFunction.ofRequestProcessor(request -> {

@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.oss;
+package cn.jzyunqi.common.third.ali.ram;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,21 +7,15 @@ import lombok.Setter;
 
 /**
  * @author wiiyaya
- * @since 2025/5/27
+ * @since 2025/6/30
  */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AliOssAuth {
+public class AliRamAuth {
 
     private String accessKeyId;
 
     private String accessKeySecret;
-
-    private String roleArn;
-
-    private String region;
-
-    private String bucket;
 }

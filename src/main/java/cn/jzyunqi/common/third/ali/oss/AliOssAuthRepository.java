@@ -23,16 +23,16 @@ public abstract class AliOssAuthRepository implements InitializingBean {
         }
     }
 
-    public AliOssAuth choosAliOssAuth(String wxAppId) {
-        return authMap.get(wxAppId);
+    public AliOssAuth choosAliOssAuth(String appId) {
+        return authMap.get(appId);
     }
 
     public void addAliOssAuth(AliOssAuth aliOssAuth) {
         authMap.put(aliOssAuth.getAccessKeyId(), aliOssAuth);
     }
 
-    public void removeAliOssAuth(String wxAppId) {
-        authMap.remove(wxAppId);
+    public void removeAliOssAuth(String appId) {
+        authMap.remove(appId);
     }
 
     public List<AliOssAuth> getAliOssAuthList() {
