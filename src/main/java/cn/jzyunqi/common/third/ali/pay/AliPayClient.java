@@ -113,7 +113,7 @@ public class AliPayClient {
                     .map(entry -> StringUtilPlus.join(entry.getKey(), "=", entry.getValue()))
                     .collect(Collectors.joining("&"));
 
-            return DigestUtilPlus.RSA256.verifySignPublicKey(needSignContent.getBytes(StringUtilPlus.UTF_8), sign, DigestUtilPlus.Base64.decodeBase64(publicKey));
+            return DigestUtilPlus.RSA.verifyWithSHA256(needSignContent.getBytes(StringUtilPlus.UTF_8), sign, DigestUtilPlus.Base64.decodeBase64(publicKey));
         } catch (Exception e) {
             log.error("======AliPayClient payCallBackCheck error :", e);
             return false;
@@ -233,7 +233,7 @@ public class AliPayClient {
                 .map(entry -> StringUtilPlus.join(entry.getKey(), "=", entry.getValue()))
                 .collect(Collectors.joining("&"));
 
-        apiParamMap.put("sign", DigestUtilPlus.RSA256.signPrivateKey(needSignContent.getBytes(StringUtilPlus.UTF_8), DigestUtilPlus.Base64.decodeBase64(privateKey), true));
+        apiParamMap.put("sign", DigestUtilPlus.RSA.signWithSHA256(needSignContent.getBytes(StringUtilPlus.UTF_8), DigestUtilPlus.Base64.decodeBase64(privateKey), true));
 
         return apiParamMap.entrySet().stream()
                 .map(entry -> StringUtilPlus.join(entry.getKey(), "=", URLEncoder.encode(entry.getValue(), StringUtilPlus.UTF_8)))
