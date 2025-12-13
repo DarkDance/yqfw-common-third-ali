@@ -72,7 +72,7 @@ public class AliOssConfig {
 
     public Map<String, String> getSignHttpHeaders(HttpMethod method, String signRegion, String canonicalUri, String queryStr, AliOssAuth auth) {
         long timestamp = System.currentTimeMillis() / 1000;
-        String currentTimestamp = LocalDateTime.ofEpochSecond(timestamp, 0, DateTimeUtilPlus.GMT0_ZONE_OFFSET).format(DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss'Z'"));
+        String currentTimestamp = LocalDateTime.ofEpochSecond(timestamp, 0, DateTimeUtilPlus.UTC0_ZONE_OFFSET).format(DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss'Z'"));
         String signDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
         String nonce = RandomUtilPlus.String.nextLowerAlphanumeric(32);
         Map<String, String> actionHeaders = new HashMap<>();

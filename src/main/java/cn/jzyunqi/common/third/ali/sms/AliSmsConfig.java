@@ -90,7 +90,7 @@ public class AliSmsConfig {
 
     private Map<String, String> getSignHttpHeaders(HttpMethod method, String queryStr, String bodyStr, Action action, AliSmsAuth auth) {
         long timestamp = System.currentTimeMillis() / 1000;
-        String currentDate = LocalDateTime.ofEpochSecond(timestamp, 0, DateTimeUtilPlus.GMT0_ZONE_OFFSET).format(DateTimeUtilPlus.ALI_BASE_DATE_FORMAT);
+        String currentDate = LocalDateTime.ofEpochSecond(timestamp, 0, DateTimeUtilPlus.UTC0_ZONE_OFFSET).format(DateTimeUtilPlus.ALI_BASE_DATE_FORMAT);
         String nonce = RandomUtilPlus.String.nextLowerAlphanumeric(32);
         Map<String, String> actionHeaders = new HashMap<>();
         if (StringUtilPlus.isNotEmpty(action.getContentType())) {

@@ -113,7 +113,7 @@ public class AliPayClient {
                     .map(entry -> StringUtilPlus.join(entry.getKey(), "=", entry.getValue()))
                     .collect(Collectors.joining("&"));
 
-            return DigestUtilPlus.RSA.verifyWithSHA256(needSignContent.getBytes(StringUtilPlus.UTF_8), sign, DigestUtilPlus.Base64.decodeBase64(publicKey));
+            return DigestUtilPlus.RSA.verifyWithSHA256(needSignContent.getBytes(StringUtilPlus.UTF_8), DigestUtilPlus.Base64.decodeBase64(sign), DigestUtilPlus.Base64.decodeBase64(publicKey));
         } catch (Exception e) {
             log.error("======AliPayClient payCallBackCheck error :", e);
             return false;
