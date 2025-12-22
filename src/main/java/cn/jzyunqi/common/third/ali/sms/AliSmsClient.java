@@ -5,10 +5,10 @@ import cn.jzyunqi.common.third.ali.sms.send.AliSmsApiProxy;
 import cn.jzyunqi.common.third.ali.sms.send.enums.Action;
 import cn.jzyunqi.common.third.ali.sms.send.model.SendSmsRsp;
 import cn.jzyunqi.common.utils.StringUtilPlus;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
 
 import java.util.List;
 import java.util.Map;
@@ -38,7 +38,7 @@ public class AliSmsClient {
             String templateParam;
             try {
                 templateParam = objectMapper.writeValueAsString(templateParamMap);
-            } catch (JsonProcessingException e) {
+            } catch (JacksonException e) {
                 throw new RuntimeException(e);
             }
             //2. 构造请求url
