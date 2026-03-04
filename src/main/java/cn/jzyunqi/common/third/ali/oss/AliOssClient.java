@@ -1,6 +1,6 @@
 package cn.jzyunqi.common.third.ali.oss;
 
-import cn.jzyunqi.common.feature.redis.RedisHelper;
+import cn.jzyunqi.common.support.spring.redis.RedisHelper;
 import cn.jzyunqi.common.third.ali.common.constant.AliCache;
 import cn.jzyunqi.common.third.ali.oss.object.AliOssObjApiProxy;
 import cn.jzyunqi.common.third.ali.ram.AliRamClient;
