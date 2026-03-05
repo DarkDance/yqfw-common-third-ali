@@ -50,7 +50,7 @@ public class AliOssConfig {
     }
 
     @Bean
-    public AliOssObjApiProxy tencentSmsSendApiProxy(WebClient.Builder webClientBuilder, AliOssAuthHelper1 aliOssAuthHelper) {
+    public AliOssObjApiProxy tencentSmsSendApiProxy(WebClient.Builder webClientBuilder, AliOssAuthHelper aliOssAuthHelper) {
         WebClient webClient = webClientBuilder.clone()
                 //.codecs(WxFormatUtils::jackson2Config)
                 .filter(ExchangeFilterFunction.ofRequestProcessor(request -> {
