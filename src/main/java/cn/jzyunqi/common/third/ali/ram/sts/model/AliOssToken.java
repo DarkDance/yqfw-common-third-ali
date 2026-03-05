@@ -1,4 +1,4 @@
-package cn.jzyunqi.common.third.ali.ram.sts.module;
+package cn.jzyunqi.common.third.ali.ram.sts.model;
 
 import lombok.Getter;
 import lombok.Setter;

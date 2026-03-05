@@ -1,7 +1,7 @@
 package cn.jzyunqi.common.third.ali.ram;
 
 import cn.jzyunqi.common.third.ali.ram.sts.AliRamStsApiProxy;
-import cn.jzyunqi.common.third.ali.ram.sts.module.AssumeRoleRsp;
+import cn.jzyunqi.common.third.ali.ram.sts.model.AssumeRoleRsp;
 import cn.jzyunqi.common.utils.StringUtilPlus;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;

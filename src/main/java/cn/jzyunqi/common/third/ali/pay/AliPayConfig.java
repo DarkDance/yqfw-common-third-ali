@@ -32,7 +32,7 @@ public class AliPayConfig {
     }
 
     @Bean
-    public AliPayOrderApiProxy aliPayOrderApiProxy(WebClient.Builder webClientBuilder, AliPayAuthRepository aliPayAuthRepository) {
+    public AliPayOrderApiProxy aliPayOrderApiProxy(WebClient.Builder webClientBuilder, AliPayAuthHelper aliPayAuthHelper) {
         WebClient webClient = webClientBuilder.clone().build();
 
         WebClientAdapter webClientAdapter = WebClientAdapter.create(webClient);

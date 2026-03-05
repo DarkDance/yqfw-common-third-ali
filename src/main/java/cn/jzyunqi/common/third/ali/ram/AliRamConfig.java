@@ -32,7 +32,7 @@ public class AliRamConfig {
     }
 
     @Bean
-    public AliRamStsApiProxy aliRamStsApiProxy(WebClient.Builder webClientBuilder, AliRamAuthRepository aliRamAuthRepository) {
+    public AliRamStsApiProxy aliRamStsApiProxy(WebClient.Builder webClientBuilder, AliRamAuthHelper aliRamAuthHelper) {
         WebClient webClient = webClientBuilder.clone()
                 //.codecs(WxFormatUtils::jackson2Config)
                 .build();

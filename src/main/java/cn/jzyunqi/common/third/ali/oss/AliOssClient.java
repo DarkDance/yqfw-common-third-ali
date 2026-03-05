@@ -4,8 +4,8 @@ import cn.jzyunqi.common.support.spring.redis.RedisHelper;
 import cn.jzyunqi.common.third.ali.common.constant.AliCache;
 import cn.jzyunqi.common.third.ali.oss.object.AliOssObjApiProxy;
 import cn.jzyunqi.common.third.ali.ram.AliRamClient;
-import cn.jzyunqi.common.third.ali.ram.sts.module.AliOssToken;
-import cn.jzyunqi.common.third.ali.ram.sts.module.AssumeRoleRsp;
+import cn.jzyunqi.common.third.ali.ram.sts.model.AliOssToken;
+import cn.jzyunqi.common.third.ali.ram.sts.model.AssumeRoleRsp;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 public class AliOssClient {
 
     @Resource
-    private AliOssAuthRepository aliOssAuthRepository;
+    private AliOssAuthHelper aliOssAuthHelper;
 
     @Resource
     private AliOssObjApiProxy aliOssObjApiProxy;
@@ -44,7 +44,7 @@ public class AliOssClient {
             return aliOssToken;
         }
 
-        AliOssAuth aliOssAuth = aliOssAuthRepository.choosAliOssAuth(null);
+        AliOssAuth aliOssAuth = aliOssAuthHelper.getAliOssAuth(null);
 
         AssumeRoleRsp assumeRoleRsp = aliRamClient.sts.generateAssumeRole(aliOssAuth.getRoleArn(), uid);
         aliOssToken = new AliOssToken();

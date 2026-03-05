@@ -53,13 +53,13 @@ public class AliSmsConfig {
     }
 
     @Bean
-    public AliSmsApiProxy aliSmsApiProxy(WebClient.Builder webClientBuilder, AliSmsAuthRepository aliSmsAuthRepository) {
+    public AliSmsApiProxy aliSmsApiProxy(WebClient.Builder webClientBuilder, AliSmsAuthHelper aliSmsAuthHelper) {
         WebClient webClient = webClientBuilder.clone()
                 //.codecs(WxFormatUtils::jackson2Config)
                 .filter(ExchangeFilterFunction.ofRequestProcessor(request -> {
                     String accessKeyId = (String) request.attribute("accessKeyId").orElse(null);
                     Action action = (Action) request.attribute("action").orElse(null);
-                    AliSmsAuth auth = aliSmsAuthRepository.choosAliSmsAuth(accessKeyId);
+                    AliSmsAuth auth = aliSmsAuthHelper.choosAliSmsAuth(accessKeyId);
 
                     ClientRequest.Builder amendRequest = ClientRequest.from(request);
                     if (request.method() == HttpMethod.GET) {

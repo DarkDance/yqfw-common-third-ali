@@ -50,13 +50,13 @@ public class AliOssConfig {
     }
 
     @Bean
-    public AliOssObjApiProxy tencentSmsSendApiProxy(WebClient.Builder webClientBuilder, AliOssAuthRepository aliOssAuthRepository) {
+    public AliOssObjApiProxy tencentSmsSendApiProxy(WebClient.Builder webClientBuilder, AliOssAuthHelper1 aliOssAuthHelper) {
         WebClient webClient = webClientBuilder.clone()
                 //.codecs(WxFormatUtils::jackson2Config)
                 .filter(ExchangeFilterFunction.ofRequestProcessor(request -> {
                     String accessKeyId = (String) request.attribute("accessKeyId").orElse(null);
                     String signRegion = (String) request.attribute("signRegion").orElse(null);
-                    AliOssAuth auth = aliOssAuthRepository.choosAliOssAuth(accessKeyId);
+                    AliOssAuth auth = aliOssAuthHelper.getAliOssAuth(accessKeyId);
 
                     ClientRequest.Builder amendRequest = ClientRequest.from(request);
                     Map<String, String> actionHeaders = getSignHttpHeaders(request.method(), signRegion, request.url().getPath(), request.url().getQuery(), auth);

@@ -1,7 +1,7 @@
 package cn.jzyunqi.common.third.ali.ram.sts;
 
 import cn.jzyunqi.common.third.ali.common.AliHttpExchange;
-import cn.jzyunqi.common.third.ali.ram.sts.module.AssumeRoleRsp;
+import cn.jzyunqi.common.third.ali.ram.sts.model.AssumeRoleRsp;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.service.annotation.HttpExchange;
 
