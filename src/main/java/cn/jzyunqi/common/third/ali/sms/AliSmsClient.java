@@ -1,6 +1,6 @@
 package cn.jzyunqi.common.third.ali.sms;
 
-import cn.jzyunqi.common.third.ali.sms.send.AliSmsApiProxy;
+import cn.jzyunqi.common.third.ali.sms.send.AliSmsApi;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 
@@ -12,6 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 public class AliSmsClient {
 
     @Resource
-    public AliSmsApiProxy sms;
+    public AliSmsApi sms;
     
 }
