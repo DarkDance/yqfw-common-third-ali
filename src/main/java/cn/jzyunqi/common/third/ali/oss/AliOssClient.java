@@ -39,7 +39,7 @@ public class AliOssClient {
     }
 
     public AliOssToken uploadToken(String uid) {
-        AliOssToken aliOssToken = (AliOssToken) redisHelper.vGet(AliCache.THIRD_ALI_OSS_V, uid);
+        AliOssToken aliOssToken = redisHelper.vGet(AliCache.THIRD_ALI_OSS_V, uid);
         if (aliOssToken != null && LocalDateTime.now().isBefore(aliOssToken.getExpiration())) {
             return aliOssToken;
         }
